@@ -24,18 +24,18 @@ jobs:
 
       - name: 生成香港可用 AI 白名单 srs
         run: |
-          python3 scripts/build_whitelist.py scripts/hk-whitelist.txt ai-services.srs
-          ls -la ai-services.srs
+          python3 scripts/build_whitelist.py scripts/hk-whitelist.txt ai-whitelist.srs
+          ls -la ai-whitelist.srs
 
       - name: 编译补充名单（上游未收录但需代理）
         run: |
-          sing-box rule-set compile --output supplement.srs supplement.json
-          ls -la supplement.srs
+          sing-box rule-set compile --output ai-supplement.srs supplement.json
+          ls -la ai-supplement.srs
 
       - name: 提交并推送（仅当有变化）
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add ai-services.srs supplement.srs
+          git add ai-whitelist.srs ai-supplement.srs
           git diff --cached --quiet || git commit -m "chore: 更新 AI 规则 $(date -u +%Y-%m-%d)"
           git push
