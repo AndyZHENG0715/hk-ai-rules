@@ -1,0 +1,54 @@
+# ===== 香港可直连的 AI 服务（白名单，匹配上游 category-ai-!cn）=====
+# 每行一个关键字或域名；# 为注释
+# 规则：域名 包含 关键字 即加入白名单 srs（这些服务将 DIRECT，不走代理）
+# 维护：某服务在香港被封 → 删除对应行 → push → workflow 自动更新白名单 → 该服务回代理
+
+# --- GitHub Copilot ---
+copilot
+# --- Cursor ---
+cursor
+# --- Gemini 网页/App（API/AI Studio/NotebookLM 保留代理）---
+gemini.google
+bard.google.com
+# --- xAI / Grok ---
+grok
+x.ai
+grokipedia
+# --- Perplexity ---
+perplexity
+pplx
+# --- Poe ---
+poe
+# --- Hugging Face ---
+huggingface
+hf.co
+hf.space
+# --- Mistral ---
+mistral
+# --- Cohere ---
+cohere
+# --- Cerebras ---
+cerebras
+# --- Midjourney ---
+midjourney
+# --- LMArena ---
+arena.ai
+# --- Meta AI ---
+meta.ai
+# --- Windsurf / Codeium ---
+windsurf
+codeium
+# --- Devin ---
+devin
+# --- Manus ---
+manus
+# --- Kimi / Moonshot 国际版 ---
+kimi
+moonshot
+# --- Coze 国际版 ---
+coze.com
+# --- 上游误收录 / 遥测 / 非 AI（白名单直接排除，避免误代理）---
+envato
+liveperson
+datadoghq
+sentry.io

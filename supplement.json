@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "rules": [
+    {
+      "domain_suffix": [
+        "suno.com",
+        "suno.ai",
+        "udio.com",
+        "dev.meta.ai",
+        "ai.meta.com"
+      ]
+    }
+  ]
+}
