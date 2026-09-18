@@ -32,10 +32,16 @@ jobs:
           sing-box rule-set compile --output ai-supplement.srs supplement.json
           ls -la ai-supplement.srs
 
+      - name: 编译香港全网直连兜底规则 (HK Direct Fallback)
+        run: |
+          sing-box rule-set compile --output all-direct.srs all-direct.json
+          ls -la all-direct.srs
+
       - name: 提交并推送（仅当有变化）
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add ai-whitelist.srs ai-supplement.srs
-          git diff --cached --quiet || git commit -m "chore: 更新 AI 规则 $(date -u +%Y-%m-%d)"
+          git add ai-whitelist.srs ai-supplement.srs all-direct.srs all-direct.json
+          git diff --cached --quiet || git commit -m "chore: 自动更新规则集 $(date -u +%Y-%m-%d)"
           git push
+
