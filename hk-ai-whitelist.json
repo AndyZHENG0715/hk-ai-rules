@@ -9,8 +9,10 @@
         "copilot-telemetry.githubusercontent.com",
         "copilot-workspace.githubnext.com",
         "copilotprodattachments.blob.core.windows.net",
+        "meta.ai",
         "o33249.ingest.sentry.io",
-        "pplx-res.cloudinary.com"
+        "pplx-res.cloudinary.com",
+        "www.meta.ai"
       ],
       "domain_suffix": [
         "arena.ai",
@@ -47,7 +49,6 @@
         "liveperson.net",
         "manus.im",
         "manuscdn.com",
-        "meta.ai",
         "midjourney.com",
         "mistral.ai",
         "moonshot.ai",

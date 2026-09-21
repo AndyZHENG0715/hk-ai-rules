@@ -2,7 +2,13 @@ name: Build HK AI Rules
 
 on:
   schedule:
-    - cron: '0 22 * * *'   # 06:00 HKT daily
+    - cron: '17 */6 * * *'   # every six hours
+  push:
+    paths:
+      - 'scripts/**'
+      - 'supplement.json'
+      - 'hk-ai-whitelist.json'
+      - '.github/workflows/build-rules.yml'
   workflow_dispatch:
 
 permissions:
@@ -24,13 +30,13 @@ jobs:
 
       - name: Build rule sets
         run: |
-          python3 scripts/build_rules.py
+          python3 scripts/build_four_layer.py
           ls -la *.srs *.json
 
       - name: Commit and push changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add *.srs *.json
+          git add -A *.srs *.json
           git diff --cached --quiet || git commit -m "chore: auto-update rule sets $(date -u +%Y-%m-%d)"
           git push
