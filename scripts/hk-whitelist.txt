@@ -8,7 +8,6 @@ copilot
 # --- Cursor ---
 cursor
 # --- Gemini 网页/App（API/AI Studio/NotebookLM 保留代理）---
-gemini.google
 bard.google.com
 # --- xAI / Grok ---
 grok
