@@ -4,6 +4,8 @@
 
 专为**香港**地区用户与开发者设计的自动化 Sing-box 规则集（Rule-set）。
 
+[当前 VilaNet 和 sing-box 架构](docs/vilanet-routing.md)记录了 Windows 与 WSL 使用的五层规则，以及 GitHub 更新后如何同步本地规则文件（英文）。
+
 ---
 
 ## 🎯 背景与设计初衷

@@ -4,6 +4,8 @@
 
 An automated, optimized rule-set tailored for users and developers in **Hong Kong**.
 
+See the [current VilaNet and sing-box setup](docs/vilanet-routing.md) for the five rule layers used on Windows and WSL and how to sync local copies after a GitHub update.
+
 ---
 
 ## 🎯 Background & Objectives
