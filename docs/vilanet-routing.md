@@ -36,7 +36,7 @@ The iPhone uses the VilaNet iOS app with the same five custom rules. DNS setting
 
 - Tunnel DNS: `https://1.0.0.1/dns-query`
 - Direct DNS: `223.5.5.5`
-- IP preference: IPv4 only
+- IP preference: Prefer IPv4
 
 FakeIP was turned off (RealIP mode) on 2026-11-09 because WhatsApp media and stickers were delayed or failed while it was on. This is still being observed. In RealIP mode, turn on **Prevent DNS leak**. If a proxied AI service ever reports an unsupported region, a likely cause is a connection whose domain was not sniffed and therefore fell through to layer 5. Turning FakeIP back on is the first thing to test.
 
